@@ -5,9 +5,6 @@ require_once 'Yubico.php'; // You will need this https://github.com/Yubico/php-y
 
 $conn = new PDO('mysql:dbname=DBNNAME;host=localhost', 'USER', 'PASS');
 $Auth_Yubico = new Auth_Yubico('ID', 'SECRET');
-$YubicoOTP = new YubicoOTP;
-
-echo $YubicoOTP->VerifyOTP($_GET['otp'],$_GET['user_id']); // Example Use
 
 class YubicoOTP {
 	var $otp;
