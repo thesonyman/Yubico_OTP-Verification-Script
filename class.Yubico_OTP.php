@@ -10,14 +10,14 @@ class YubicoOTP {
 	var $otp;
 	var $user_id;
 	
-	public function GetStaticOTP($otp){
+	protected function GetStaticOTP($otp){
 		$array = array();
 		
 		$array['YubicoOTP']['StaticOTP'] = substr($otp, 0, 12);
 		echo json_encode($array, JSON_FORCE_OBJECT);
 	}
 	
-	public function CheckOTP($otp, $user_id){
+	protected function CheckOTP($otp, $user_id){
 		global $conn;
 		$array = array();
 		$StaticOTP1 = substr($otp, 0, 12); // Get first 12 characters.
@@ -37,7 +37,7 @@ class YubicoOTP {
 		echo json_encode($array, JSON_FORCE_OBJECT);
 	}
 	
-	public function VerifyOTP($otp, $user_id){
+	protected function VerifyOTP($otp, $user_id){
 		global $conn;
 		global $Auth_Yubico;
 		$array = array();
