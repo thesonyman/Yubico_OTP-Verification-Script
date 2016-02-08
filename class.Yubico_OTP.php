@@ -3,8 +3,8 @@ header("Content-Type: text/plain; charset=utf-8;");
 
 require_once 'Yubico.php'; // You will need this https://github.com/Yubico/php-yubico
 
-$conn = new PDO('mysql:dbname=DBNNAME;host=localhost', 'USER', 'PASS');
-$Auth_Yubico = new Auth_Yubico('ID', 'SECRET');
+$conn = new PDO('mysql:dbname=DBNAME;host=HOSTNAME', 'DBUSER', 'DBPASS');
+$Auth_Yubico = new Auth_Yubico('API_ID', 'API_KEY'); // Generate a new id+key from https://upgrade.yubico.com/getapikey
 
 class YubicoOTP {
 	var $otp;
