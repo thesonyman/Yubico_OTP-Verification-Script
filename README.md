@@ -17,4 +17,4 @@ CREATE TABLE IF NOT EXISTS `users` (
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=0 ;
 
 INSERT INTO `users` (`id`, `yubico_otp`) VALUES (1, 'ccbbddeertkrctjkkcglfndnlihhnvekchkcctif');
-</rpe>
+</pre>
